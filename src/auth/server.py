@@ -3,7 +3,7 @@ from flask import Flask, request
 from flask_mysqldb import MySQL
 
 server = Flask(__name__)
-mysql = MySQL(server)
+mysql = MySQL(server)ss
 
 server.config["MYSQL_HOST"] = os.environ.get("MYSQL_HOST")
 server.config["MYSQL_USER"] = os.environ.get("MYSQL_HOST")
@@ -62,5 +62,5 @@ def validate():
 
     return decoded, 200
 if __name__ == "__main__":
-    server.run(host='0.0.0.0')
+    server.run(host='0.0.0.0', port=5052)
 
